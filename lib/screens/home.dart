@@ -3,6 +3,9 @@ import 'package:go_router/go_router.dart';
 import 'package:my_money/controllers/budget_controller.dart';
 import 'package:my_money/controllers/home_controller.dart';
 
+import '../controllers/prefs_controller.dart';
+import '../widgets/my_pie_chart.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -33,28 +36,34 @@ class _HomeState extends State<Home> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Widget de porcentaje en circulo"),
+                Container(
+                  width: 200,
+                  height: 200,
+                  padding: EdgeInsets.all(16),
+                  child: MyPieChart(budget: moneyProvider.budget, expenses: moneyProvider.expenses),
+                ),
                 SizedBox(height: 50),
                 ElevatedButton(
                     onPressed: () => resetData(context),
                     child: const Text("Eliminar presupuesto y datos"),
                     style: ElevatedButton.styleFrom(foregroundColor: Colors.black, backgroundColor: Colors.redAccent)),
+                SizedBox(height: 50),
                 Text("Presupuesto: ${moneyProvider.budget.toString()} \$", style: TextStyle(fontSize: 25)),
                 Text("Balance: ${moneyProvider.balance.toString()} \$", style: TextStyle(fontSize: 25)),
                 Text("Gastos: ${moneyProvider.expenses.toString()} \$", style: TextStyle(fontSize: 25)),
                 SizedBox(height: 50),
-                Text("Filtrar gastos por:"),
-                SizedBox(height: 50),
+                // Text("Filtrar gastos por:"),
+                // SizedBox(height: 50),
                 Container(
                   height: MediaQuery.of(context).size.height * 0.3,
                   width: double.infinity,
-                  color: Colors.grey,
+                  color: Colors.transparent,
                   child: ListView.separated(
                     itemCount: moneyProvider.expensesList.length,
                     itemBuilder: (context, i) {
                       return Container(
-                        color: Colors.white,
-                        height: 150,
+                        color: Colors.transparent,
+                        height: 80,
                         width: MediaQuery.of(context).size.width * 0.8,
                         child: Column(children: [
                           Text(moneyProvider.expensesList[i]['name']),

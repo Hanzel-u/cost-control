@@ -125,27 +125,12 @@ class _ExpenseState extends State<Expense> {
                         label: Text("Categoria"),
                         contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                       ),
-                      items: moneyProvider.categories.map((itemone) {
-                        return DropdownMenuItem(value: itemone, child: Text(itemone));
+                      items: moneyProvider.categories.map((item) {
+                        return DropdownMenuItem(value: item, child: Text(item));
                       }).toList(),
                       validator: (value) => validatorCategory(value),
                       onChanged: (value) {},
                     ),
-                    // DropdownMenu(
-                    //   label: const Text("Categoria"),
-                    //   controller: categoryController,
-                    //   initialSelection: "otros",
-                    //   onSelected: (value) => selectCategory(value),
-                    //   dropdownMenuEntries: const <DropdownMenuEntry<String>>[
-                    //     DropdownMenuEntry(value: "Ahorro", label: "Ahorro"),
-                    //     DropdownMenuEntry(value: "comida", label: "comida"),
-                    //     DropdownMenuEntry(value: "transporte", label: "transporte"),
-                    //     DropdownMenuEntry(value: "salud", label: "salud"),
-                    //     DropdownMenuEntry(value: "entretenimiento", label: "entretenimiento"),
-                    //     DropdownMenuEntry(value: "educacion", label: "educacion"),
-                    //     DropdownMenuEntry(value: "otros", label: "otros"),
-                    //   ],
-                    // ),
                     const SizedBox(
                       height: 24,
                     ),
