@@ -1,0 +1,70 @@
+﻿@model IEnumerable<ControlDeCredito.Models.Municipio>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="table-responsive">
+    <table class="table table-hover table-sm small">
+        <thead class="bg-opacity-25 bg-secondary small">
+            <tr>
+                              
+
+                <th class="text-center">
+                    @Html.DisplayNameFor(model => model.Departamento.CodigoDeDepartamento)
+                </th>
+                <th class="text-center">
+                    @Html.DisplayNameFor(model => model.CodigoDeMunicipio)
+                </th>
+                <th class="text-center">
+                    @Html.DisplayNameFor(model => model.DescripcionDeMunicipio)
+                </th>
+                
+                <th class="text-center">Acciones</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider" data-bind="foreach:activos">
+            <tr class="align-middle">
+
+                @foreach (var item in Model)
+                {
+
+                <td class="text-center"> 
+                @Html.DisplayFor(modelItem => item.Departamento.CodigoDeDepartamento)
+                </td>
+                <td class="text-center"> 
+                @Html.DisplayFor(modelItem => item.CodigoDeMunicipio)
+                </td>
+                <td class="text-center">
+                @Html.DisplayFor(modelItem => item.DescripcionDeMunicipio)
+                </td>
+
+                    <td class="text-center align-middle">
+                        <div class="btn-group btn-group-sm">
+                            
+                            <a href="@Url.Action("Edit", new {id=item.Id})" title="Editar" class="masterTooltip">
+                                <img src="@Url.Content("~/Content/images/edit.png")" height="15" width="15" />
+                            </a>
+
+                            <a href="@Url.Action("Details", new {id=item.Id})" title="Detalles" class="masterTooltip">
+                                <img src="@Url.Content("~/Content/images/detallar.jpg")" height="15" width="15" />
+                            </a>
+
+                            <a href="@Url.Action("Delete", new {id=item.Id})" title="Eliminar" class="masterTooltip">
+                                <img src="@Url.Content("~/Content/images/eliminar.gif")" height="15" width="15" />
+                            </a>
+
+
+                        </div>
+                    </td>
+                }
+                </tr>
+        </tbody>
+    </table>
+</div>

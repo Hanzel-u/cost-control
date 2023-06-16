@@ -1,0 +1,100 @@
+﻿
+.ContenedorOpcionesBusqueda {
+    border: 1px solid black;
+    padding: 1%;
+    width: 850px;
+    background-color: rgba(117, 205, 210, 0.23);
+}
+
+.IconosBusqueda {
+    background-image: url("../../images/Detallar.png");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
+#ContenedorOpcionTercero, #ContenedorOpcionClave {
+    display: inline-block;
+}
+
+#ContenedorOpcionClave, #ContenedorOpcionNumeroDoc {
+    display: none;
+}
+
+div.titulo {
+    cursor: pointer;
+    color: white;
+}
+
+    div.titulo:hover {
+        color: rgb(45, 86, 246);
+    }
+
+.IconoPestañaAbajo {
+    background-image: url("../../images/down.png");
+    background-repeat: no-repeat;
+    background-size: 32px;
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+    position: relative;
+    top: 8px;
+}
+
+.IconoPestañaArriba {
+    background-image: url("../../images/up.png");
+    background-repeat: no-repeat;
+    background-size: 32px;
+}
+
+.Acordeon {
+    border: 4px solid;
+    max-width: 930px;
+    border-color: #75cdd2;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    behavior: url(border.htc);
+    background-color: rgba(117, 205, 210, 0.23);
+    height: 0;
+    overflow: hidden;
+    padding: 10px;
+    transition: height linear 1s;
+    -moz-transition: height linear 1s;
+    -webkit-transition: height linear 1s;
+    -o-transition: height linear 0.5s;
+}
+
+.Estirar {
+    height: 200px;
+}
+
+div.Acordeon label {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+fieldset.Recuadro {
+    display: block;
+    padding: 4px;
+    border: 2px groove threedface;
+    min-width: -webkit-min-content;
+    background-color: rgba(80, 197, 207, 1);
+}
+
+    fieldset.Recuadro legend {
+        color: #2279D8;
+        font-weight:bold;
+        display: block;
+    }
+

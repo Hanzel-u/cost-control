@@ -1,0 +1,12 @@
+C:\Users\hgonzalez\source\repos\ControlDeCreditoUNP\AutenticacionUNP\bin\Debug\AutenticacionUNP.dll.config
+C:\Users\hgonzalez\source\repos\ControlDeCreditoUNP\AutenticacionUNP\bin\Debug\AutenticacionUNP.dll
+C:\Users\hgonzalez\source\repos\ControlDeCreditoUNP\AutenticacionUNP\bin\Debug\AutenticacionUNP.pdb
+C:\Users\hgonzalez\source\repos\ControlDeCreditoUNP\AutenticacionUNP\bin\Debug\EntityFramework.dll
+C:\Users\hgonzalez\source\repos\ControlDeCreditoUNP\AutenticacionUNP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hgonzalez\source\repos\ControlDeCreditoUNP\AutenticacionUNP\bin\Debug\EntityFramework.xml
+C:\Users\hgonzalez\source\repos\ControlDeCreditoUNP\AutenticacionUNP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hgonzalez\source\repos\ControlDeCreditoUNP\AutenticacionUNP\obj\Debug\AutenticacionUNP.csproj.AssemblyReference.cache
+C:\Users\hgonzalez\source\repos\ControlDeCreditoUNP\AutenticacionUNP\obj\Debug\AutenticacionUNP.csproj.CoreCompileInputs.cache
+C:\Users\hgonzalez\source\repos\ControlDeCreditoUNP\AutenticacionUNP\obj\Debug\AutenticacionUNP.csproj.CopyComplete
+C:\Users\hgonzalez\source\repos\ControlDeCreditoUNP\AutenticacionUNP\obj\Debug\AutenticacionUNP.dll
+C:\Users\hgonzalez\source\repos\ControlDeCreditoUNP\AutenticacionUNP\obj\Debug\AutenticacionUNP.pdb

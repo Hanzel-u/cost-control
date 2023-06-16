@@ -1,0 +1,112 @@
+﻿@model IEnumerable<ControlDeCredito.Models.Departamento>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoDeDepartamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescripcionDeDepartamento)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoDeDepartamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionDeDepartamento)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+@{
+    ViewBag.Title = "Index";
+    WebGrid grid = new WebGrid(Model,
+            defaultSort: "titulo", rowsPerPage: 10, canPage: true, canSort: false, fieldNamePrefix: "gridItens", pageFieldName: "dentro", selectionFieldName: "selectedRow");
+}
+
+
+<font face="arial black" size=4>Medio de Usuario</font>
+<br />
+<br />
+<a href="@Url.Action("Index","Home")" title="Regresar" class="masterTooltip">
+    <img src="@Url.Content("~/Content/images/arrow_turn_left.png")" height="20" width="20" />
+</a>
+<a href="@Url.Action("Create", new {Id=@ViewBag.Grupo })" title="Agregar" class="masterTooltip">
+    <img src="@Url.Content("~/Content/images/agregar.jpg")" height="40" width="40" />
+</a>
+
+
+@*<a href="@Url.Action("ReportePOA.aspx", "Reportes", new { Pei =ViewBag.PeiID, unidad = ViewBag.UnidadID, año = ViewBag.Ano, Area = ViewBag.area }) " title="Imprimir POA por Area" class="masterTooltip" target="_blank">
+    <img src="@Url.Content("~/Content/images/printer.png")" height="20" width="20"/ ></a>*@
+
+<div>
+    <br />
+    <br />
+    @if (Model.Count() > 0)
+    {
+        <b>Grupo:</b>@Model.ElementAt(0).CodigoDeDepartamento
+    }
+
+
+
+
+    @grid.GetHtml(
+            tableStyle: "webgrid-table",
+            headerStyle: "webgrid-header",
+            footerStyle: "webgrid-footer",
+            alternatingRowStyle: "webgrid-alternating-row",
+            selectedRowStyle: "webgrid-selected-row",
+            rowStyle: "webgrid-row-style",
+            mode: WebGridPagerModes.All,
+            firstText: "<<", previousText: "<", nextText: ">", lastText: ">>",
+
+            columns:
+                grid.Columns(
+                grid.Column("CodigoDeDepartamento", "Codigo"),
+                grid.Column("DescripcionDeDepartamento", "Descripcion"),
+
+
+                 grid.Column("Acción", format: @<text>
+
+                    <a href="@Url.Action("Edit", new {id=item.Id})" title="Editar" class="masterTooltip">
+                        <img src="@Url.Content("~/Content/images/edit.png")" height="15" width="15" />
+                    </a>
+
+                    <a href="@Url.Action("Details", new {id=item.Id})" title="Detalles" class="masterTooltip">
+                        <img src="@Url.Content("~/Content/images/detallar.jpg")" height="15" width="15" />
+                    </a>
+
+                    <a href="@Url.Action("Delete", new {id=item.Id})" title="Eliminar" class="masterTooltip">
+                        <img src="@Url.Content("~/Content/images/eliminar.gif")" height="15" width="15" />
+                    </a>
+
+
+
+
+
+
+                </text>)
+        ))
+</div>

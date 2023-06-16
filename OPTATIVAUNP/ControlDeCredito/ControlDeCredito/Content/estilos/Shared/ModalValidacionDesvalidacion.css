@@ -1,0 +1,42 @@
+﻿    .ModalValidar 
+    {
+        position:relative;
+        border:1px solid black;
+        background-color:rgb(117, 205, 210);
+        z-index: 5;
+        width: 448px;
+        margin: 15% auto;
+        height:130px;
+        box-shadow: 0 0 22px rgba(0,0,0,0.7);
+        padding:8px;
+    }
+
+    .MensajeAdvertencia
+    {
+        color:white;
+        font-weight:bold;
+        font-size:16px;
+        text-align:center;
+        display: inline;
+        position: relative;
+        bottom: 20px;
+    }
+
+
+     .IconoValidacion 
+    {
+        background-image:url("../../images/DinerValidacion.png");
+        background-repeat:no-repeat;
+        width: 64px;
+        height: 62px;
+        display: inline-block;
+    }
+
+     .IconoNoValidacion 
+    {
+        background-image:url("../../images/DinerDesvalidacion.png");
+        background-repeat:no-repeat;
+        width: 64px;
+        height: 62px;
+        display: inline-block;
+    }

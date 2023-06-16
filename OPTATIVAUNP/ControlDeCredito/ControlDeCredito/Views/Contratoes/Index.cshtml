@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ControlDeCredito.Models.Contrato>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.CodigoDeCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoDeContrato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeContrato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ComisionDeContrato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoBasicoDeContrato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoAcobrar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CantidadDeCuotas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.CodigoDeCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoDeContrato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeContrato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ComisionDeContrato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoBasicoDeContrato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoAcobrar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CantidadDeCuotas)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ControlDeCredito.Models.Recibo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Contrato.CodigoDeContrato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroDeRecibo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FecheDeRecibo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoRecibo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroDeCuotaPagada)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contrato.CodigoDeContrato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroDeRecibo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FecheDeRecibo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoRecibo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroDeCuotaPagada)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

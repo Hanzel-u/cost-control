@@ -1,0 +1,74 @@
+﻿@model ControlDeCredito.Models.Contrato
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contrato</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.CodigoDeCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.CodigoDeCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoDeContrato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoDeContrato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeContrato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeContrato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComisionDeContrato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComisionDeContrato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoBasicoDeContrato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoBasicoDeContrato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoAcobrar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoAcobrar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadDeCuotas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadDeCuotas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

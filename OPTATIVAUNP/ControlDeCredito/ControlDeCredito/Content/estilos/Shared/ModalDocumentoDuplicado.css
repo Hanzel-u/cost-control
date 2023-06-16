@@ -1,0 +1,110 @@
+﻿/****************************** Modal Documento Duplicado **********************************/
+
+.BloqueoDocDuplicado {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.50);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#3C727070, endColorstr=#3C727070);
+    display: none;
+}
+
+.ModalDocDuplicado {
+    position: relative;
+    width: 445px;
+    height: 495px;
+    z-index: 5;
+    margin: 50px auto;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: rgb(117, 205, 210);
+    box-shadow: 0 0 22px rgba(0,0,0,0.7);
+}
+
+.ModalDocDuplicado h3 {
+    color: white;
+    display: inline-block;
+}
+
+fieldset.ContenidoCedula, fieldset.ContenidoDescripcion {
+    display: block;
+    margin: 5px;
+    padding: 10px;
+    border: 2px groove threedface;
+    min-width: -webkit-min-content;
+    background-color: rgba(0, 226, 9, 0.23);
+}
+
+fieldset.ContenidoCedula legend, fieldset.ContenidoDescripcion legend {
+    font-weight: bold;
+    display: block;
+    color: white;
+}
+
+.ImgDuplicado {
+    background-image: url("../../images/copy.png");
+    background-repeat: no-repeat;
+    background-size: 46px;
+    display: inline-block;
+    width: 42px;
+    height: 44px;
+    position: relative;
+    top: 11px;
+}
+
+.ImgPersona {
+    background-image: url("../../images/persona.png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    top: 6px;
+    position: relative;
+}
+
+input[type=button].btnImgDuplicar {
+    background-image: url("../../images/copy.png");
+    background-repeat: no-repeat;
+    background-position-x: 2px;
+    background-position-y: 3px;
+    background-size: 26px;
+    padding-left: 28px;
+    font-weight: bold;
+}
+
+.ModalDocDuplicado input[disabled], .ModalDocDuplicado textarea[disabled] {
+    background-color: #bbb;
+}
+
+.CerrarDuplicado {
+    position: relative;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.CerrarDuplicado:hover {
+    color: red;
+}
+
+.MsjLimite {
+    position: relative;
+    left: 68px;
+    color: rgb(29, 37, 240);
+    font-size: 12px;
+}
+
+.EtiquetaTercero {
+    font-weight: bold;
+    color: white;
+}
+
+.MsjEstiloValidacion {
+    color: #e80c4d;
+    font-weight: bold;
+}
+
+/**********************************************************************************************************/
