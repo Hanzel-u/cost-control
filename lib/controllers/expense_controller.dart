@@ -29,11 +29,17 @@ validateName(value) {
 
 setExpense(context, formKey) {
   if (formKey.currentState.validate()) {
-    formKey.currentState.save();
+    // print('expense1: ${expense}');
+    // print('LISTA: ${moneyProvider.expensesList}');
+
     moneyProvider.addExpense(expense);
+
+    // print('expense2: ${expense}');
+    // print('LISTA: ${moneyProvider.expensesList}');
     saveValue('int', 'balance', moneyProvider.balance);
     saveValue('int', 'expense', moneyProvider.expenses);
     saveValue('stringList', 'expensesList', moneyProvider.expensesList);
+    // formKey.currentState.save();
     GoRouter.of(context).pushReplacement('/home');
   }
 }

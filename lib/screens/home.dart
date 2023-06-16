@@ -14,6 +14,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  void xd() {
+    print('LISTAAAAAAAAAAA: ${moneyProvider.expensesList}');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,16 +47,17 @@ class _HomeState extends State<Home> {
                   padding: EdgeInsets.all(16),
                   child: MyPieChart(budget: moneyProvider.budget, expenses: moneyProvider.expenses),
                 ),
-                SizedBox(height: 50),
+                SizedBox(height: 10),
                 ElevatedButton(
+                    // onPressed: () => xd(),
                     onPressed: () => resetData(context),
                     child: const Text("Eliminar presupuesto y datos"),
                     style: ElevatedButton.styleFrom(foregroundColor: Colors.black, backgroundColor: Colors.redAccent)),
-                SizedBox(height: 50),
+                SizedBox(height: 10),
                 Text("Presupuesto: ${moneyProvider.budget.toString()} \$", style: TextStyle(fontSize: 25)),
                 Text("Balance: ${moneyProvider.balance.toString()} \$", style: TextStyle(fontSize: 25)),
                 Text("Gastos: ${moneyProvider.expenses.toString()} \$", style: TextStyle(fontSize: 25)),
-                SizedBox(height: 50),
+                SizedBox(height: 10),
                 // Text("Filtrar gastos por:"),
                 // SizedBox(height: 50),
                 Container(

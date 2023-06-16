@@ -2,6 +2,8 @@
 // información entre widgets y acualizar de forma
 // reactiva los widgets que esten escuchando los
 // cambios de la información
+import 'dart:math';
+
 import 'package:flutter/foundation.dart';
 
 class MoneyProvider with ChangeNotifier {
@@ -12,7 +14,9 @@ class MoneyProvider with ChangeNotifier {
   List<Map<String, dynamic>> expensesList = [];
 
   void addExpense(Map<String, dynamic> expense) {
+    print('LISTA: ${expensesList}');
     expensesList.add(expense);
+    print('LISTA: ${expensesList}');
     expenses += expense['amount'] as int;
     balance -= expense['amount'] as int;
     notifyListeners();
