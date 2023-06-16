@@ -9,21 +9,16 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-black">
         <div class="container1">
             @Html.ActionLink("Control de Creditos", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            <br />
-           
-
+            <br/>
         </div>
     </nav>
     
     <div class="content-wrappermenu">
-
         @Html.Partial("Menu2")
-
-</div>
+    </div>
     
     <br />
     <br />
