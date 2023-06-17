@@ -4,55 +4,59 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Crear</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-<div class="d-flex justify-content-center">
-    <div class="form-horizontal">
-        <h4>Municipio</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.CodigoDeMunicipio, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CodigoDeMunicipio, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CodigoDeMunicipio, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.DescripcionDeMunicipio, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DescripcionDeMunicipio, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DescripcionDeMunicipio, "", new { @class = "text-danger" })
+    <div class="d-flex justify-content-center">
+        <div class="form-horizontal">
+            <h4>Municipio</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.CodigoDeMunicipio, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CodigoDeMunicipio, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CodigoDeMunicipio, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.DepartamentoId, "DepartamentoId", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("DepartamentoId", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.DepartamentoId, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.DescripcionDeMunicipio, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DescripcionDeMunicipio, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DescripcionDeMunicipio, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+            <div class="form-group">
+                @Html.LabelFor(model => model.DepartamentoId, "DepartamentoId", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("DepartamentoId", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.DepartamentoId, "", new { @class = "text-danger" })
+                </div>
             </div>
+
+            <br />
+            <p>
+                <input type="submit" class="btn btn-success" value="Guardar" />
+                <input type="button" class="btn btn-danger" value="Regresar" onclick="Regresar()" />
+            </p>
         </div>
     </div>
-</div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+
+<script>
+
+     function Regresar() {
+         location.href = "@Url.Action("Index", "Municipios")"
+            return
+        }
+</script>

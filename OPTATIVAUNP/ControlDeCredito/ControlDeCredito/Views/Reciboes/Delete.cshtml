@@ -53,12 +53,25 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Eliminar" class="btn btn-default bg-warning" /> |
+            <input type="button" class="btn btn-danger" value="Regresar" onclick="Regresar()" />
         </div>
     }
 </div>
+
+@Scripts.Render("~/bundles/jqueryval")
+}
+
+<script>
+
+     function Regresar() {
+         location.href = "@Url.Action("Index", "Reciboes")"
+            return
+        }
+</script>
+s
